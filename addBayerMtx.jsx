@@ -30,7 +30,7 @@ function addBayerMtxToPresetManager() {
     function addBayerMtx(bayerType) {
         // --------------------------------------------------------------------------------
         // Create/recreate our beloved "halftone-like square pattern" (as Adobe saids)
-        // and store it as a pattern called BayerMtx2x2, BayerMtx4x4 or BayerMtx8x8
+        // and store it as a pattern called Bayer2x2, Bayer4x4 or Bayer8x8
         // --------------------------------------------------------------------------------
         var oldRulerUnits = app.preferences.rulerUnits
         var oldTypeUnits = app.preferences.typeUnits
@@ -48,19 +48,19 @@ function addBayerMtxToPresetManager() {
 	        doc = app.activeDocument;
         	drawBayerMtx2x2(doc,0,0);    
         	doc.selection.select([[0, 0],[2, 0],[2, 2],[0, 2],[0, 0]], SelectionType.EXTEND);    
-        	definePattern( "BayerMtx2x2" )
+        	definePattern( "Bayer2x2" )
 	}else if (bayerType == "Bayer8x8") {
         	checkersDoc = app.documents.add(8, 8, 72, "DitherMtx");        
 	        doc = app.activeDocument;
         	drawBayerMtx8x8(doc,0,0);    
         	doc.selection.select([[0, 0],[8, 0],[8, 8],[0, 8],[0, 0]], SelectionType.EXTEND);    
-        	definePattern( "BayerMtx8x8" )
+        	definePattern( "Bayer8x8" )
 	}else{
         	checkersDoc = app.documents.add(4, 4, 72, "DitherMtx");        
 	        doc = app.activeDocument;
         	drawBayerMtx4x4(doc,0,0);    
         	doc.selection.select([[0, 0],[4, 0],[4, 4],[0, 4],[0, 0]], SelectionType.EXTEND);    
-        	definePattern( "BayerMtx4x4" )
+        	definePattern( "Bayer4x4" )
 	}
         
         doc.close(SaveOptions.DONOTSAVECHANGES)
