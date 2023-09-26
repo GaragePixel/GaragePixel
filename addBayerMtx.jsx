@@ -17,6 +17,11 @@
 // 2. Restart Photoshop
 // 3. Choose File > Scripts > Create the Bayer Pattern 2x2/4x4/8x8 in the Library
 // ============================================================================
+// Portable usage:
+// 1. File > Scripts > Browse
+// 2. Find your copy
+// 3. Enjoy^^
+// ============================================================================
 
 #target photoshop
 
@@ -24,7 +29,7 @@ function addBayerMtxToPresetManager() {
 
     function addBayerMtx(bayerType) {
         // --------------------------------------------------------------------------------
-        // Create/recreate our beloved "halftone-like square pattern" (as Adobe said)
+        // Create/recreate our beloved "halftone-like square pattern" (as Adobe saids)
         // and store it as a pattern called BayerMtx2x2, BayerMtx4x4 or BayerMtx8x8
         // --------------------------------------------------------------------------------
         var oldRulerUnits = app.preferences.rulerUnits
