@@ -127,7 +127,13 @@ function addBayerMtxToPresetManager() {
     }
 
     function main() {
+	// Update: You surely want the three patterns.
+	// Else not, then just put the call as commentary by placing // before the call, like that: 
+	// addBayerMtx("Bayer4x4")
+	// TODO: Put a pattern of any bayer size iff this pattern isn't already in the lib
+	addBayerMtx("Bayer2x2")
         addBayerMtx("Bayer4x4")
+	addBayerMtx("Bayer8x8")
     }
 
     app.activeDocument.suspendHistory("Recreate Bayer's pattern","main()")
