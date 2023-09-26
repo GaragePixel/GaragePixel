@@ -127,7 +127,7 @@ function addBayerMtxToPresetManager() {
     }
 
     function main() {
-        addBayerMtx("Bayer8x8")
+        addBayerMtx("Bayer4x4")
     }
 
     app.activeDocument.suspendHistory("Recreate Bayer's pattern","main()")
