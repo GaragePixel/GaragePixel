@@ -88,7 +88,7 @@ function addBayerMtxToPresetManager() {
     function drawBayerMtx2x2(doc,x,y) {
         var d=255.0/3;
         plotPixel(doc,x+0,y+0,GREY(0));     plotPixel(doc,x+1,y+0,GREY(2*d));
-        plotPixel(doc,x+0,y+1,GREY(3*d));   plotPixel(doc,x+1,y+1,GREY(255));
+        plotPixel(doc,x+0,y+1,GREY(3*d));   plotPixel(doc,x+1,y+1,GREY(85));
     }
 
     function drawBayerMtx4x4(doc,x,y) {
