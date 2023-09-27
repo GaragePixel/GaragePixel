@@ -70,6 +70,70 @@ function addBayerMtxToPresetManager() {
         app.displayDialogs = oldDisplayDialogs
     }
 
+    function addInLibPatternIfNotExist(patternName) {
+        switch (patternName) {
+            case "Bayer2x2":
+                addBayer2x2ifNotExist()
+                break;
+            case "Bayer4x4":
+                addBayer4x4ifNotExist()
+                break;
+            case "Bayer8x8":
+                addBayer8x8ifNotExist()
+                break;
+        }      
+    }
+
+    function addBayer2x2ifNotExist() {        
+        if (!hasPattern("Bayer2x2")) {
+            addBayerMtx("Bayer2x2")
+        }
+    }
+
+    function addBayer4x4ifNotExist() {        
+        if (!hasPattern("Bayer4x4")) {
+            addBayerMtx("Bayer4x4")
+        }
+    }
+
+    function addBayer8x8ifNotExist() {        
+        if (!hasPattern("Bayer8x8")) {
+            addBayerMtx("Bayer8x8")
+        }
+    }
+
+    function deleteLayer() {
+        // Delete current selected layer
+        this.desc[0] = new ActionDescriptor();
+        this.ref[0] = new ActionReference();
+        this.ref[0].putEnumerated(this.cTID('Lyr '), this.cTID('Ordn'), this.cTID('Trgt'));
+        this.desc[0].putReference(this.cTID('null'), this.ref[0]);
+        executeAction(this.cTID('Dlt '), this.desc[0], this.dialogMode);
+    }
+
+    function hasPattern(thisPatternName) {
+	var result;
+	try {
+		var ref = new ActionReference();
+		ref.putProperty(stringIDToTypeID ("property"), stringIDToTypeID("presetManager") ); 
+		ref.putEnumerated( charIDToTypeID("capp"), charIDToTypeID("Ordn"), charIDToTypeID("Trgt") );
+		var applicationDesc = executeActionGet(ref);
+		var presetManager = applicationDesc.getList(stringIDToTypeID("presetManager"));
+		var patternNames = presetManager.getObjectValue(4).getList(stringIDToTypeID("name"));
+		var theNames = new Array;
+		for (m = 0; m < patternNames.count; m++) {
+		    theNames.push(patternNames.getString(m))
+		}
+		for (i = 0; i < theNames.length; i++) {
+		    if (theNames[i] == thisPatternName) {
+		    	result = true;
+			break
+		    }		
+		} 
+	} catch (e) {}
+	return result
+    }
+
     function definePattern(patternName) {
         var c2t = function (s) {return app.charIDToTypeID(s);};
         var doc = app.activeDocument;
@@ -130,10 +194,9 @@ function addBayerMtxToPresetManager() {
 	// Update: You surely want the three patterns.
 	// Else not, then just put the call as commentary by placing // before the call, like that: 
 	// addBayerMtx("Bayer4x4")
-	// TODO: Put a pattern of any bayer size iff this pattern isn't already in the lib
-	addBayerMtx("Bayer2x2")
-        addBayerMtx("Bayer4x4")
-	addBayerMtx("Bayer8x8")
+	addInLibPatternIfNotExist("Bayer2x2")
+	addInLibPatternIfNotExist("Bayer4x4")
+	addInLibPatternIfNotExist("Bayer8x8")
     }
 
     app.activeDocument.suspendHistory("Recreate Bayer's pattern","main()")
