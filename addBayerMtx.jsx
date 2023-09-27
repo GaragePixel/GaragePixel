@@ -7,13 +7,14 @@
 // Website: https://www.facebook.com/GaragePixelOfficial/ <-- Please follow!
 // ============================================================================
 // Version: 0.0.1, 2022-03-16 [Internal usage]
-// Version: 1.0.0, 2023-09-26 [first public release]
+// Version: 1.0.0, 2023-09-26 [First public release]
 // Version: 1.0.1, 2022-09-27 [Add conditional pattern making]
 // ============================================================================
-// Usage: As this, you can change the call addBayerMtx("Bayer4x4") in the Main function of addBayerMtx(bayerType) in the objet function addBayerMtxToPresetManager()
-// The options are: Bayer2x2, Bayer4x4 and Bayer8x8
+// Usage: Just run^^
 // Notes: This script is a part of a library with some minor but included dependencies.
-// The plot method is original from the author. It puts a single pixel from a selection. After testing many solution, this technique is the fastest for this task.
+// The plot method is original from the author. 
+// It puts a single pixel from a selection. 
+// After testing many solution, this technique is the fastest for this task.
 // ============================================================================
 // Installation:
 // 1. Place script in 'C:\Program Files\Adobe\Adobe Photoshop CC ####\Presets\Scripts\'
@@ -105,15 +106,6 @@ function addBayerMtxToPresetManager() {
         if (!hasPattern("Bayer8x8")) {
             addBayerMtx("Bayer8x8")
         }
-    }
-
-    function deleteLayer() {
-        // Delete current selected layer
-        this.desc[0] = new ActionDescriptor();
-        this.ref[0] = new ActionReference();
-        this.ref[0].putEnumerated(this.cTID('Lyr '), this.cTID('Ordn'), this.cTID('Trgt'));
-        this.desc[0].putReference(this.cTID('null'), this.ref[0]);
-        executeAction(this.cTID('Dlt '), this.desc[0], this.dialogMode);
     }
 
     function hasPattern(thisPatternName) {
