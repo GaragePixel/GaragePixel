@@ -188,9 +188,6 @@ function addBayerMtxToPresetManager() {
     }
 
     function main() {
-	// Update: You surely want the three patterns.
-	// Else not, then just put the call as commentary by placing // before the call, like that: 
-	// addBayerMtx("Bayer4x4")
 	addInLibPatternIfNotExist("Bayer2x2")
 	addInLibPatternIfNotExist("Bayer4x4")
 	addInLibPatternIfNotExist("Bayer8x8")
