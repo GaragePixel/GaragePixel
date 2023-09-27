@@ -3,7 +3,7 @@
 // ============================================================================
 // Description: Create the Bayer Pattern 2x2/4x4/8x8 in the Library
 // Requirements: Adobe Photoshop CS2, or higher
-// Version: 1.0.0, 2022-03-16
+// Version: 1.0.1, 2022-03-16
 // Author: iDkP for GaragePixel (https://www.facebook.com/GaragePixelOfficial/)
 // Website: https://www.facebook.com/GaragePixelOfficial/ <-- Please follow!
 // ============================================================================
@@ -21,6 +21,8 @@
 // 1. File > Scripts > Browse
 // 2. Find your copy
 // 3. Enjoy^^
+// ============================================================================
+// Todo: The script creates only the missing patterns [Done]
 // ============================================================================
 
 #target photoshop
