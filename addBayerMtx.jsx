@@ -3,11 +3,12 @@
 // ============================================================================
 // Description: Create the Bayer Pattern 2x2/4x4/8x8 in the Library
 // Requirements: Adobe Photoshop CS2, or higher
-// Version: 0.0.1, 2022-03-16
-// Version: 1.0.0, 2023-09-26
-// Version: 1.0.1, 2022-09-27
 // Author: iDkP for GaragePixel (https://www.facebook.com/GaragePixelOfficial/)
 // Website: https://www.facebook.com/GaragePixelOfficial/ <-- Please follow!
+// ============================================================================
+// Version: 0.0.1, 2022-03-16 [Internal usage]
+// Version: 1.0.0, 2023-09-26 [first public release]
+// Version: 1.0.1, 2022-09-27 [Add conditional pattern making]
 // ============================================================================
 // Usage: As this, you can change the call addBayerMtx("Bayer4x4") in the Main function of addBayerMtx(bayerType) in the objet function addBayerMtxToPresetManager()
 // The options are: Bayer2x2, Bayer4x4 and Bayer8x8
