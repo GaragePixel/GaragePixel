@@ -12,5 +12,5 @@ Usage: Put this script in the position parameter of any layer.
 3. Use the anchor to adjust the layer's position after linking
 ----
 var srcLayer = thisComp.layer("my path layer"); // Put the name of your shape layer
-// The point is in a array, access to this data with path.points()[0], [n] is the point's number, the offset 0 is the 1st point
+// The point is in an array, access to this data with path.points()[0], [n] is the point's number, the offset 0 is the 1st point
 srcLayer.content("Shape 1").content("Path 1").path.points()[0]; // If necessary, change the names of the contents
