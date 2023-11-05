@@ -1,0 +1,14 @@
+----
+No floating values for position:
+AfterFx Expression
+----
+Author: GaragePixel
+Date: 2023-11-05
+----
+Plot: Rounding a value on the Position variable
+----
+Usage: Put this script in the Position parameter of any layer.
+1. Use ALT+click over the watch to link the parameter to the script and copy/paste this code
+2. Add this by preference after making an key animation.
+----
+[Math.floor(transform.position[0]),Math.floor(transform.position[1])]
