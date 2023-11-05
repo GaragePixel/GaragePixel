@@ -1,0 +1,19 @@
+----
+No floating values for path's vertices position:
+AfterFx Expression
+----
+Author: GaragePixel
+Date: 2023-11-05
+----
+Plot: Rounds a value on the vertex's Position variable
+----
+Usage: Put this script in the Path parameter of any shape layer.
+1. Use ALT+click over the watch to link the parameter to the script and copy/paste this code
+2. Add this by preference after making an key animation.
+----
+
+var verts = thisProperty.value
+for (var i = 0, ii = verts.length; i < ii; i++){
+	verts[i] = [Math.floor(verts[i][0]),Math.floor(verts[i][1])];
+}
+verts
