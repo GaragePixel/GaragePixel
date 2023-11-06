@@ -1,0 +1,15 @@
+----
+Real time Copy Path
+AfterFx Expression
+----
+Author: GaragePixel
+Date: 2023-10-27
+----
+Plot: Copy the content (points) of a path to another path in realtime
+----
+Usage: Put this script in the path parameter of any shape of a shape layer.
+1. Use ALT+click over the watch to link the parameter to the script and copy/paste this code
+2. Change the values if necessary
+----
+var srcLayer = thisComp.layer("my layer");
+srcLayer.content("Shape 1").content("Path 1").path;
