@@ -20,8 +20,7 @@ Here's how the preset works:
 1. Since the anti-aliasing pixels are in the form of a pixel of the same reference color but with variations in opacity, it is necessary to recover the visible luminance values and produce a new future opacity stencil with these pixels which for the moment is visible as an RGB channel on which we will be able to operate.
 2. We pull the values into their extremes using a contrast in order to keep only white pixels for represent the path.
 3. At this moment, the future stencil is black and white, black is used as the key value for opacity.
-4. When the path appears, it is at that moment completely white, it must be retained. We could recover directly the color of the path using an expression, but it is possibly interesting to use several colors for the paths at the time of drafting considering that they will all be the same color in the end. To be able to modify this color using an easily accessible parameter, the Tint effect refers to the last contained Fx
-in the preset, and this by means of an expression.
+4. When the path appears, it is at that moment completely white, it must be retained. We could recover directly the color of the path using an expression, but it is possibly interesting to use several colors for the paths at the time of drafting considering that they will all be the same color in the end. To be able to modify this color using an easily accessible parameter, the Tint effect refers to the last contained Fx in the preset, and this by means of an expression.
 5. This last Fx is a color control which allows you to change the color of all the paths contained in the shape layer.
 
 This preset assumes these points:
