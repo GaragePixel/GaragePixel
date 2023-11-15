@@ -57,21 +57,21 @@ function addBayerMtxToPresetManager() {
 	        doc = app.activeDocument;
         	drawBayer2x2(doc,0,0);    
         	doc.selection.select([[0, 0],[2, 0],[2, 2],[0, 2],[0, 0]], SelectionType.EXTEND);    
-        	definePattern( "patternName" )
+        	definePattern( patternName )
                 break;
             case "Bayer4x4":			
         	checkersDoc = app.documents.add(4, 4, 72, "DitherMtx");        
 	        doc = app.activeDocument;
         	drawBayer4x4(doc,0,0);    
         	doc.selection.select([[0, 0],[4, 0],[4, 4],[0, 4],[0, 0]], SelectionType.EXTEND);    
-        	definePattern( "patternName" )
+        	definePattern( patternName )
                 break;
             case "Bayer8x8":
         	checkersDoc = app.documents.add(8, 8, 72, "DitherMtx");        
 	        doc = app.activeDocument;
         	drawBayer8x8(doc,0,0);    
         	doc.selection.select([[0, 0],[8, 0],[8, 8],[0, 8],[0, 0]], SelectionType.EXTEND);    
-        	definePattern( "patternName" )
+        	definePattern( patternName )
                 break; // I will add other important patterns in the future
         }
         
