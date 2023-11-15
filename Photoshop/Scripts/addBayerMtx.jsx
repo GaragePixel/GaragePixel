@@ -8,7 +8,7 @@
 // ============================================================================
 // Version: 0.0.1, 2022-03-16 [Internal usage]
 // Version: 1.0.0, 2023-09-26 [First public release]
-// Version: 1.0.1, 2022-09-27 [Add conditional pattern making]
+// Version: 1.0.1, 2023-09-27 [Add conditional pattern making]
 // ============================================================================
 // Usage: Just run^^
 // Notes: This script is a part of a library with some minor but included dependencies.
