@@ -1,5 +1,5 @@
-- 👋 Hi, I’m iDkP, working for @GaragePixel
-- 👀 I’m interested pixel art and some automation for Photoshop
+- 👋 Hi, I’m iDkP, working @GaragePixel
+- 👀 I’m interested pixel art and some automations for Photoshop
 - 🌱 I'm writing a library to create plug-ins even faster
 - 💞️ I would like to share this library and increase my knowledge in the field of coding
 - 📫 [How to reach me ...](https://www.facebook.com/GaragePixelOfficial/) Please follow GaragePixel^^
